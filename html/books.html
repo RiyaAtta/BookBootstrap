@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- For adding icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b7926f3752.js" crossorigin="anonymous"></script>
+
+    <!-- External css adding: booksStyle.css -->
+    <link rel="stylesheet" href="../CSS/booksStyle.css">
+
+
+    <title>bookLodeon - BookStoreManagementApplication</title>
+</head>
+
+<body>
+    <!-- Nav bar module -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../Images/bookLogo1.webp" alt="" width="50" height="50" class="d-inline-block align-text-top">
+            </a>
+            <a class="navbar-brand" href="#">bookLodeon</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="location.href='index.html'">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Browse Category
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Fiction</a></li>
+                            <li><a class="dropdown-item" href="#">Horror</a></li>
+                            <li><a class="dropdown-item" href="#">Romantic</a></li>
+                            <li><a class="dropdown-item" href="#">Suspence</a></li>
+                        </ul>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search by Category" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <!-- user icon -->
+                <div class="mx-2">
+                    <div class="dropdown">
+                        <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">My orders</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">My review</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- cart icon -->
+                <div class="mx-2">
+                    <button type="button" class="btn btn-primary">
+                        <i style="font-size: 20px;" class="fas fa-cart-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- intro module -->
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="../Images/book1.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700"
+                    height="500" loading="lazy" id="frontImg">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">Welcome to the Biggest Online Bookstore</h1>
+                <p class="lead">Join 100,321 Happy readers And Get Access To Our Entire Collection Of 1000 ebooks For
+                    The Price Of One. We offer a 45 Day Money Back Guarantee, so joining is risk-free!</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-outline-primary btn-lg px-4">Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- adding arrow image -->
+    <div class="container " id="arrow">
+        <img src="../Images/left-arrow.png" alt="">
+    </div>
+
+    <!-- all books -->
+
+    <!-- Bestselling books -->
+    <div class="container">
+        <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="container headerClass">
+                    <header>
+                        <h2>BestSelling Books</h2>
+                    </header>
+                </div>
+                <div class="carousel-item active">
+                    <!-- active 1st set of books -->
+                    <div class="container" id="first">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk1.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Psycho, 1959</h4>
+                                <h6> Peter Benchley</h6>
+                                <p class="card-text">Category: Horror</p>
+                                <p><strong>Price:</strong> Rs. 360</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk2.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Jaws, 1974</h4>
+                                <h6>Robert Bloch</h6>
+                                <p class="card-text">Category: Psychological</p>
+                                <p><strong>Price:</strong> Rs. 230</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk3.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Jurassic Park, 1990</h4>
+                                <h6>Michael Crichton</h6>
+                                <p class="card-text">Category: Thriller</p>
+                                <p><strong>Price:</strong> Rs. 170</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk4.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">The Godfather, 1969</h4>
+                                <h6>Mario Puzo</h6>
+                                <p class="card-text">Category: Fiction</p>
+                                <p><strong>Price:</strong> Rs. 550</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 2nd set of books-->
+                <div class="carousel-item">
+                    <div class="container" id="second">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk5.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">To Kill a Mockingbird, 1960</h4>
+                                <h6>Harper Lee</h6>
+                                <p class="card-text">Category: Thriller</p>
+                                <p><strong>Price:</strong> Rs. 230</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk6.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Flowers in the Attic, 1979</h4>
+                                <h6>V.C. Andrews</h6>
+                                <p class="card-text">Category: Suspence</p>
+                                <p><strong>Price:</strong> Rs. 190</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk7.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">The Wizard of Oz, 1900</h4>
+                                <h6>L. Frank Baum</h6>
+                                <p class="card-text">Category: Adventure</p>
+                                <p><strong>Price:</strong> Rs. 270</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk8.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Beowulf, 1999</h4>
+                                <h6>Seamus Heaney</h6>
+                                <p class="card-text">Category: Fiction</p>
+                                <p><strong>Price:</strong> Rs. 799</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 3rd -->
+                <div class="carousel-item">
+
+                    <div class="container" id="first">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk9.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">A Clockwork Orange, 1962</h4>
+                                <h6>David Pelham</h6>
+                                <p class="card-text">Category: Comedy</p>
+                                <p><strong>Price:</strong> Rs. 569</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk10.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">The Brief History of the Dead, 2006</h4>
+                                <h6>Kevin Brockmier</h6>
+                                <p class="card-text">Category: Romantic</p>
+                                <p><strong>Price:</strong> Rs. 899</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk11.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">The Bell Jar, 1963</h4>
+                                <h6>Sylvia Plath</h6>
+                                <p class="card-text">Category: Suspence</p>
+                                <p><strong>Price:</strong> Rs. 330</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk12.jpg" class="card-img-top cardImg cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Dracula, 1897</h4>
+                                <h6>Bram Stoker</h6>
+                                <p class="card-text">Category: Horror</p>
+                                <p><strong>Price:</strong> Rs. 666</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- new releases -->
+
+    <div class="container">
+        <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="container headerClass">
+                    <header>
+                        <h2>New releases</h2>
+                    </header>
+                </div>
+                <div class="carousel-item active">
+                    <!-- active 1st set of books -->
+                    <div class="container" id="first">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk1.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Psycho, 1959</h4>
+                                <h6> Peter Benchley</h6>
+                                <p class="card-text">Category: Horror</p>
+                                <p><strong>Price:</strong> Rs. 360</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk2.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Jaws, 1974</h4>
+                                <h6>Robert Bloch</h6>
+                                <p class="card-text">Category: Psychological</p>
+                                <p><strong>Price:</strong> Rs. 230</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk3.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Jurassic Park, 1990</h4>
+                                <h6>Michael Crichton</h6>
+                                <p class="card-text">Category: Thriller</p>
+                                <p><strong>Price:</strong> Rs. 170</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk4.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">The Godfather, 1969</h4>
+                                <h6>Mario Puzo</h6>
+                                <p class="card-text">Category: Fiction</p>
+                                <p><strong>Price:</strong> Rs. 550</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 2nd set of books-->
+                <div class="carousel-item">
+                    <div class="container" id="first">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk5.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">To Kill a Mockingbird, 1960</h4>
+                                <h6>Harper Lee</h6>
+                                <p class="card-text">Category: Thriller</p>
+                                <p><strong>Price:</strong> Rs. 230</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk6.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Flowers in the Attic, 1979</h4>
+                                <h6>V.C. Andrews</h6>
+                                <p class="card-text">Category: Suspence</p>
+                                <p><strong>Price:</strong> Rs. 190</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk7.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">The Wizard of Oz, 1900</h4>
+                                <h6>L. Frank Baum</h6>
+                                <p class="card-text">Category: Adventure</p>
+                                <p><strong>Price:</strong> Rs. 270</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk8.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Beowulf, 1999</h4>
+                                <h6>Seamus Heaney</h6>
+                                <p class="card-text">Category: Fiction</p>
+                                <p><strong>Price:</strong> Rs. 799</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 3rd -->
+                <div class="carousel-item">
+
+                    <div class="container" id="first">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk9.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">A Clockwork Orange, 1962</h4>
+                                <h6>David Pelham</h6>
+                                <p class="card-text">Category: Comedy</p>
+                                <p><strong>Price:</strong> Rs. 569</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk10.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">The Brief History of the Dead, 2006</h4>
+                                <h6>Kevin Brockmier</h6>
+                                <p class="card-text">Category: Romantic</p>
+                                <p><strong>Price:</strong> Rs. 899</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk11.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">The Bell Jar, 1963</h4>
+                                <h6>Sylvia Plath</h6>
+                                <p class="card-text">Category: Suspence</p>
+                                <p><strong>Price:</strong> Rs. 330</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk12.jpg" class="card-img-top cardImg cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Dracula, 1897</h4>
+                                <h6>Bram Stoker</h6>
+                                <p class="card-text">Category: Horror</p>
+                                <p><strong>Price:</strong> Rs. 666</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Featured Books -->
+    <div class="container">
+        <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="container headerClass">
+                    <header>
+                        <h2>Featured Books</h2>
+                    </header>
+                </div>
+                <div class="carousel-item active">
+                    <!-- active 1st set of books -->
+                    <div class="container" id="third">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk1.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Psycho, 1959</h4>
+                                <h6> Peter Benchley</h6>
+                                <p class="card-text">Category: Horror</p>
+                                <p><strong>Price:</strong> Rs. 360</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk2.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Jaws, 1974</h4>
+                                <h6>Robert Bloch</h6>
+                                <p class="card-text">Category: Psychological</p>
+                                <p><strong>Price:</strong> Rs. 230</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk3.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Jurassic Park, 1990</h4>
+                                <h6>Michael Crichton</h6>
+                                <p class="card-text">Category: Thriller</p>
+                                <p><strong>Price:</strong> Rs. 170</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk4.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">The Godfather, 1969</h4>
+                                <h6>Mario Puzo</h6>
+                                <p class="card-text">Category: Fiction</p>
+                                <p><strong>Price:</strong> Rs. 550</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 2nd set of books-->
+                <div class="carousel-item">
+                    <div class="container" id="second">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk5.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">To Kill a Mockingbird, 1960</h4>
+                                <h6>Harper Lee</h6>
+                                <p class="card-text">Category: Thriller</p>
+                                <p><strong>Price:</strong> Rs. 230</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk6.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Flowers in the Attic, 1979</h4>
+                                <h6>V.C. Andrews</h6>
+                                <p class="card-text">Category: Suspence</p>
+                                <p><strong>Price:</strong> Rs. 190</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk7.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">The Wizard of Oz, 1900</h4>
+                                <h6>L. Frank Baum</h6>
+                                <p class="card-text">Category: Adventure</p>
+                                <p><strong>Price:</strong> Rs. 270</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk8.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Beowulf, 1999</h4>
+                                <h6>Seamus Heaney</h6>
+                                <p class="card-text">Category: Fiction</p>
+                                <p><strong>Price:</strong> Rs. 799</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 3rd -->
+                <div class="carousel-item">
+
+                    <div class="container" id="first">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk9.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">A Clockwork Orange, 1962</h4>
+                                <h6>David Pelham</h6>
+                                <p class="card-text">Category: Comedy</p>
+                                <p><strong>Price:</strong> Rs. 569</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk10.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">The Brief History of the Dead, 2006</h4>
+                                <h6>Kevin Brockmier</h6>
+                                <p class="card-text">Category: Romantic</p>
+                                <p><strong>Price:</strong> Rs. 899</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk11.jpg" class="card-img-top cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">The Bell Jar, 1963</h4>
+                                <h6>Sylvia Plath</h6>
+                                <p class="card-text">Category: Suspence</p>
+                                <p><strong>Price:</strong> Rs. 330</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Images/bk12.jpg" class="card-img-top cardImg cardImg" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title">Dracula, 1897</h4>
+                                <h6>Bram Stoker</h6>
+                                <p class="card-text">Category: Horror</p>
+                                <p><strong>Price:</strong> Rs. 666</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="container-fluid " style="background-color: #e3f2fd;">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2021 bookLodeon, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+
+    <!-- <div class="wp-block-bwgb-products-carousel__inner container">
+        <header class="mb-5 justify-content-between align-items-center bwgb-products-carousel__block-header d-md-flex ">
+            <h2 class="bwgb-products-carousel__block-title font-size-7 mb-3 mb-md-0">Bestselling Books</h2><a
+                href="https://demo4.madrasthemes.com/bookworm/shop/"
+                class="h-primary d-block bwgb-products-carousel__block-action-text"><span>View All</span><i
+                    class="flaticon flaticon-next ml-1"></i></a>
+        </header>
+         -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
